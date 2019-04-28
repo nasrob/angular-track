@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary"
+      (click)="onShowText()">Display Details</button>
+      <p *ngIf="showText == true">{{ textToDisplay }}</p>
+      <br>
+      <hr>
+      <p *ngFor="let log of logs"
+          [ngStyle]="{backgroundColor: log >= 5 ? 'blue' : 'trasnparent'}"
+          [ngClass]="{whiteText: log>=5}">Click Number {{ log }}</p>
+    </div>
+  </div>
+</div>
